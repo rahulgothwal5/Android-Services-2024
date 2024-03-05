@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Android_Service_2024"
+        tools:targetApi="31">
+        <activity
+            android:name=".remotebinderservice.RemoteBindingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_remote_binding"
+            android:theme="@style/Theme.Android_Service_2024" />
+        <activity
+            android:name=".normalservice.ServiceActivity"
+            android:exported="false"
+            android:label="@string/title_activity_service"
+            android:theme="@style/Theme.Android_Service_2024" />
+        <activity
+            android:name=".localbinderservice.LocalBindingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_local_binding"
+            android:theme="@style/Theme.Android_Service_2024" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Android_Service_2024">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".normalservice.MyService" />
+        <service android:name=".localbinderservice.LocalBindingService" />
+        <service android:name=".remotebinderservice.RemoteBindingService" android:exported="true" />
+    </application>
+
+    <queries>
+        <package android:name="com.example.remotebindingconsumerapp" />
+    </queries>
+
+</manifest>
