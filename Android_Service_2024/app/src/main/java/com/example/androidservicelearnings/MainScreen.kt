@@ -14,6 +14,8 @@ fun MainScreen(
     serviceScreen:()->Unit,
     localBindingScreen:()->Unit,
     remoteBindingScreen:()->Unit,
+    intentServiceScreen:()->Unit,
+    boundIntentServiceScreen:()->Unit,
 ) {
     Column(
         Modifier.fillMaxSize(),
@@ -28,6 +30,12 @@ fun MainScreen(
         }
         CustomButton("Remote Binding") {
             remoteBindingScreen()
+        }
+        CustomButton("Intent Service") {
+            intentServiceScreen()
+        }
+        CustomButton("IntentService Binding") {
+            boundIntentServiceScreen()
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.androidservicelearnings.normalservice
+package com.example.androidservicelearnings.services.normalservice
 
 import android.app.Service
 import android.content.Intent

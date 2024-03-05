@@ -1,4 +1,4 @@
-package com.example.androidservicelearnings.normalservice
+package com.example.androidservicelearnings.services.normalservice
 
 import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement

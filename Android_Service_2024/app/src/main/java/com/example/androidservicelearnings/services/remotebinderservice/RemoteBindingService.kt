@@ -1,4 +1,4 @@
-package com.example.androidservicelearnings.remotebinderservice
+package com.example.androidservicelearnings.services.remotebinderservice
 
 import android.app.Service
 import android.content.Intent

@@ -1,0 +1,16 @@
+/.idea/.gitignore
+/.idea/Android-Services-2024.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/Android_Service_2024/.idea/.gitignore
+/Android_Service_2024/.idea/compiler.xml
+/Android_Service_2024/.idea/gradle.xml
+/Android_Service_2024/.idea/kotlinc.xml
+/Android_Service_2024/.idea/misc.xml
+/Android_Service_2024/.idea/vcs.xml
+/RemoteBindingConsumerApp/.idea/.gitignore
+/RemoteBindingConsumerApp/.idea/compiler.xml
+/RemoteBindingConsumerApp/.idea/gradle.xml
+/RemoteBindingConsumerApp/.idea/kotlinc.xml
+/RemoteBindingConsumerApp/.idea/misc.xml
+/RemoteBindingConsumerApp/.idea/vcs.xml

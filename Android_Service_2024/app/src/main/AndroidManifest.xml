@@ -13,19 +13,27 @@
         android:theme="@style/Theme.Android_Service_2024"
         tools:targetApi="31">
         <activity
-            android:name=".remotebinderservice.RemoteBindingActivity"
+            android:name=".services.remotebinderservice.RemoteBindingActivity"
             android:exported="false"
             android:label="@string/title_activity_remote_binding"
             android:theme="@style/Theme.Android_Service_2024" />
         <activity
-            android:name=".normalservice.ServiceActivity"
+            android:name=".services.normalservice.ServiceActivity"
             android:exported="false"
             android:label="@string/title_activity_service"
             android:theme="@style/Theme.Android_Service_2024" />
         <activity
-            android:name=".localbinderservice.LocalBindingActivity"
+            android:name=".services.localbinderservice.LocalBindingActivity"
             android:exported="false"
             android:label="@string/title_activity_local_binding"
+            android:theme="@style/Theme.Android_Service_2024" />
+        <activity
+            android:name=".intentservices.boundintentservice.IntentServiceBindingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Android_Service_2024" />
+        <activity
+            android:name=".intentservices.intentservice.IntentServiceActivity"
+            android:exported="false"
             android:theme="@style/Theme.Android_Service_2024" />
         <activity
             android:name=".MainActivity"
@@ -39,9 +47,11 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".normalservice.MyService" />
-        <service android:name=".localbinderservice.LocalBindingService" />
-        <service android:name=".remotebinderservice.RemoteBindingService" android:exported="true" />
+        <service android:name=".services.normalservice.MyService" />
+        <service android:name=".services.localbinderservice.LocalBindingService" />
+        <service android:name=".services.remotebinderservice.RemoteBindingService" android:exported="true" />
+        <service android:name=".intentservices.intentservice.MyIntentService" />
+        <service android:name=".intentservices.boundintentservice.MyBoundIntentService" />
     </application>
 
     <queries>

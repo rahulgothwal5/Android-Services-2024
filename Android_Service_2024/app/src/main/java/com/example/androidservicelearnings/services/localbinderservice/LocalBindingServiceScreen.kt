@@ -1,4 +1,4 @@
-package com.example.androidservicelearnings.localbinderservice
+package com.example.androidservicelearnings.services.localbinderservice
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

@@ -89,7 +89,7 @@ class MainActivity : ComponentActivity() {
         serviceIntent = Intent()
         serviceIntent.component = ComponentName(
             "com.example.androidservicelearnings",
-            "com.example.androidservicelearnings.remotebinderservice.RemoteBindingService"
+            "com.example.androidservicelearnings.services.remotebinderservice.RemoteBindingService"
         )
         setContent {
             RemoteBindingConsumerAppTheme {

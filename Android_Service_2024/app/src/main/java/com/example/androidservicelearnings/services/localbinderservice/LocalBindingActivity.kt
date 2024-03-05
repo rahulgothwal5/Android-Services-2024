@@ -1,4 +1,4 @@
-package com.example.androidservicelearnings.localbinderservice
+package com.example.androidservicelearnings.services.localbinderservice
 
 import android.annotation.SuppressLint
 import android.content.ComponentName

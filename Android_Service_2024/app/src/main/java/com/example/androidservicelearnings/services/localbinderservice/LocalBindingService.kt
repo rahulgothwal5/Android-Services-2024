@@ -1,4 +1,4 @@
-package com.example.androidservicelearnings.localbinderservice
+package com.example.androidservicelearnings.services.localbinderservice
 
 import android.app.Service
 import android.content.Intent

@@ -26,10 +26,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.androidservicelearnings.localbinderservice.LocalBindingActivity
-import com.example.androidservicelearnings.normalservice.ServiceActivity
-import com.example.androidservicelearnings.remotebinderservice.RemoteBindingActivity
-import com.example.androidservicelearnings.remotebinderservice.RemoteBindingService
+import com.example.androidservicelearnings.intentservices.boundintentservice.IntentServiceBindingActivity
+import com.example.androidservicelearnings.intentservices.intentservice.IntentServiceActivity
+import com.example.androidservicelearnings.services.localbinderservice.LocalBindingActivity
+import com.example.androidservicelearnings.services.normalservice.ServiceActivity
+import com.example.androidservicelearnings.services.remotebinderservice.RemoteBindingActivity
+import com.example.androidservicelearnings.services.remotebinderservice.RemoteBindingService
 import com.example.androidservicelearnings.ui.theme.Android_Service_2024Theme
 
 class MainActivity : ComponentActivity() {
@@ -80,6 +82,20 @@ class MainActivity : ComponentActivity() {
                         )
                     }, remoteBindingScreen = {
                         val activityIntent = Intent(this@MainActivity, RemoteBindingActivity::class.java).apply {
+                            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                        }
+                        startActivity(
+                            activityIntent
+                        )
+                    }, intentServiceScreen = {
+                        val activityIntent = Intent(this@MainActivity, IntentServiceActivity::class.java).apply {
+                            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                        }
+                        startActivity(
+                            activityIntent
+                        )
+                    }, boundIntentServiceScreen = {
+                        val activityIntent = Intent(this@MainActivity, IntentServiceBindingActivity::class.java).apply {
                             flags = Intent.FLAG_ACTIVITY_NEW_TASK
                         }
                         startActivity(
