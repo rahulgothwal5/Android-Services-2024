@@ -11,11 +11,13 @@ import com.example.androidservicelearnings.ui.CustomButton
 
 @Composable
 fun MainScreen(
-    serviceScreen:()->Unit,
-    localBindingScreen:()->Unit,
-    remoteBindingScreen:()->Unit,
-    intentServiceScreen:()->Unit,
-    boundIntentServiceScreen:()->Unit,
+    serviceScreen: () -> Unit,
+    localBindingScreen: () -> Unit,
+    remoteBindingScreen: () -> Unit,
+    intentServiceScreen: () -> Unit,
+    boundIntentServiceScreen: () -> Unit,
+    jobIntentServiceScreen: () -> Unit,
+    jobSchedulerScreen: () -> Unit,
 ) {
     Column(
         Modifier.fillMaxSize(),
@@ -36,6 +38,12 @@ fun MainScreen(
         }
         CustomButton("IntentService Binding") {
             boundIntentServiceScreen()
+        }
+        CustomButton("JobIntent Service") {
+            jobIntentServiceScreen()
+        }
+        CustomButton("Job Scheduler") {
+            jobSchedulerScreen()
         }
     }
 }

@@ -28,6 +28,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.androidservicelearnings.intentservices.boundintentservice.IntentServiceBindingActivity
 import com.example.androidservicelearnings.intentservices.intentservice.IntentServiceActivity
+import com.example.androidservicelearnings.job.jobintentservice.JobIntentServiceActivity
+import com.example.androidservicelearnings.job.jobsecheduler.JobSchedulerActivity
 import com.example.androidservicelearnings.services.localbinderservice.LocalBindingActivity
 import com.example.androidservicelearnings.services.normalservice.ServiceActivity
 import com.example.androidservicelearnings.services.remotebinderservice.RemoteBindingActivity
@@ -35,7 +37,6 @@ import com.example.androidservicelearnings.services.remotebinderservice.RemoteBi
 import com.example.androidservicelearnings.ui.theme.Android_Service_2024Theme
 
 class MainActivity : ComponentActivity() {
-
 
     @OptIn(ExperimentalMaterial3Api::class)
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -67,35 +68,58 @@ class MainActivity : ComponentActivity() {
                     ) {
                     }
                     MainScreen(serviceScreen = {
-                        val activityIntent = Intent(this@MainActivity, ServiceActivity::class.java).apply {
-                            flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                        }
+                        val activityIntent =
+                            Intent(this@MainActivity, ServiceActivity::class.java).apply {
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                            }
                         startActivity(
                             activityIntent
                         )
                     }, localBindingScreen = {
-                        val activityIntent = Intent(this@MainActivity, LocalBindingActivity::class.java).apply {
-                            flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                        }
+                        val activityIntent =
+                            Intent(this@MainActivity, LocalBindingActivity::class.java).apply {
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                            }
                         startActivity(
                             activityIntent
                         )
                     }, remoteBindingScreen = {
-                        val activityIntent = Intent(this@MainActivity, RemoteBindingActivity::class.java).apply {
-                            flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                        }
+                        val activityIntent =
+                            Intent(this@MainActivity, RemoteBindingActivity::class.java).apply {
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                            }
                         startActivity(
                             activityIntent
                         )
                     }, intentServiceScreen = {
-                        val activityIntent = Intent(this@MainActivity, IntentServiceActivity::class.java).apply {
+                        val activityIntent =
+                            Intent(this@MainActivity, IntentServiceActivity::class.java).apply {
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                            }
+                        startActivity(
+                            activityIntent
+                        )
+                    }, boundIntentServiceScreen = {
+                        val activityIntent = Intent(
+                            this@MainActivity,
+                            IntentServiceBindingActivity::class.java
+                        ).apply {
                             flags = Intent.FLAG_ACTIVITY_NEW_TASK
                         }
                         startActivity(
                             activityIntent
                         )
-                    }, boundIntentServiceScreen = {
-                        val activityIntent = Intent(this@MainActivity, IntentServiceBindingActivity::class.java).apply {
+                    }, jobIntentServiceScreen = {
+                        val activityIntent =
+                            Intent(this@MainActivity, JobIntentServiceActivity::class.java).apply {
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                            }
+                        startActivity(
+                            activityIntent
+                        )
+                    }, jobSchedulerScreen = {
+                        val activityIntent =
+                        Intent(this@MainActivity, JobSchedulerActivity::class.java).apply {
                             flags = Intent.FLAG_ACTIVITY_NEW_TASK
                         }
                         startActivity(

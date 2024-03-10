@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -36,6 +42,14 @@
             android:exported="false"
             android:theme="@style/Theme.Android_Service_2024" />
         <activity
+            android:name=".job.jobintentservice.JobIntentServiceActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Android_Service_2024" />
+        <activity
+            android:name=".job.jobsecheduler.JobSchedulerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Android_Service_2024" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
@@ -49,9 +63,17 @@
 
         <service android:name=".services.normalservice.MyService" />
         <service android:name=".services.localbinderservice.LocalBindingService" />
-        <service android:name=".services.remotebinderservice.RemoteBindingService" android:exported="true" />
+        <service
+            android:name=".services.remotebinderservice.RemoteBindingService"
+            android:exported="true" />
         <service android:name=".intentservices.intentservice.MyIntentService" />
         <service android:name=".intentservices.boundintentservice.MyBoundIntentService" />
+        <service
+            android:name=".job.jobintentservice.MyJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".job.jobsecheduler.MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
     <queries>
